@@ -7,5 +7,5 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def repo_is_installed(host):
-        pkg = host.package("percona-release")
-        assert pkg.is_installed
+    pkg = host.package("percona-release")
+    assert pkg.is_installed
