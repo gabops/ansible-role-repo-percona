@@ -1,40 +1,49 @@
-Role Name
+gabops.repo-percona
 =========
 
-A brief description of the role goes here.
+Installs Percona (https://www.percona.com) repository.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should
-be mentioned here. For instance, if the role uses the EC2 module, it may be a
-good idea to mention in this section that the boto package is required.
+None.
 
 Role Variables
 --------------
+This role uses the variables with the next default values:
 
-A description of the settable variables for this role should go here, including
-any variables that are in defaults/main.yml, vars/main.yml, and any variables
-that can/should be set via parameters to the role. Any variables that are read
-from other roles and/or the global scope (ie. hostvars, group vars, etc.) should
-be mentioned here as well.
+  RedHat os family:
+  - `percona_repo_url`: https://repo.percona.com/yum/percona-release-latest.noarch.rpm
+  
+  - `percona_repo_gpg_key_url`: https://www.percona.com/downloads/RPM-GPG-KEY-percona
+
+  Debian os family:
+  - `percona_repo_url`: "https://repo.percona.com/apt/percona-release_latest.{{ ansible_distribution_release }}_all.deb"
+
+The values can be overwritten as usual when calling the role. (see examples)
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in
-regards to parameters that may need to be set for other roles, or variables that
-are used from other roles.
+None
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables
-passed in as parameters) is always nice for users too:
-
+1 - Using the default values this roles uses:
+```yaml
     - hosts: servers
       roles:
-         - { role: ansible-role-repo-percona, x: 42 }
+         - { role: gabops.repo-percona }
+```
+2 - Overwritting the a value for using for example another url repo
+```yaml
+    - hosts: servers
+      vars:
+        percona_repo_url: http://another_url/foo/bar.deb
+      roles:
+         - { role: gabops.repo-percona }
+```
 
 License
 -------
@@ -44,5 +53,4 @@ MIT
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a
-website (HTML is not allowed).
+Gabriel Suarez (gabops)

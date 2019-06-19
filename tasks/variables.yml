@@ -1,0 +1,18 @@
+---
+- name: Include os specific variables (RHEL)
+  include_vars: "{{ ansible_os_family }}.yml"
+  when: ansible_os_family == "RedHat"
+
+- name: Include os specific variables (Debian)
+  include_vars: "{{ ansible_os_family }}.yml"
+  when: ansible_os_family == "Debian"
+
+- name: Set Percona repo url
+  set_fact:
+    percona_repo_url: "{{ __percona_repo_url }}"
+  when: percona_repo_url is not defined
+
+- name: Set Percona repo gpg key url
+  set_fact:
+    percona_repo_gpg_key_url: "{{ __percona_repo_gpg_key_url }}"
+  when: percona_repo_gpg_key_url is not defined and ansible_os_family == "RedHat"

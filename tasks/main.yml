@@ -1,2 +1,4 @@
 ---
-# tasks file for ansible-role-repo-percona
+- include_tasks: variables.yml
+
+- include_tasks: setup.yml
