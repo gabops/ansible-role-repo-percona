@@ -12,17 +12,16 @@ galaxy_info:
         - 7
     - name: Amazon
       versions:
-        - 1
-        - 2
+        - 2017.12
+        - 2018.03
     - name: Debian
       versions:
-        - 8
-        - 9
+        - jessie
+        - stretch
     - name: Ubuntu
       versions:
-        - 16.04
-        - 18.04
-
+        - xenial
+        - bionic
   galaxy_tags:
     - percona
     - db
