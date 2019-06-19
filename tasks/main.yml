@@ -16,4 +16,5 @@
 - name: Install Percona apt repository
   apt:
     deb: "{{ percona_repo_url }}"
+    force_apt_get: yes
   when: ansible_os_family == "Debian"
