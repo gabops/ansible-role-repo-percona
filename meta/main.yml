@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: repo-percona
   author: Gabriel Suarez
   description: Enables Percona repository in the host
   license: MIT
