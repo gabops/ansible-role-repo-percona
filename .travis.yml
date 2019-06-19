@@ -4,17 +4,18 @@ services: docker
 
 env:
   matrix:
-    - MOLECULE_DISTRO: centos:7
-    - MOLECULE_DISTRO: centos:6
-    - MOLECULE_DISTRO: amazonlinux:1
-    - MOLECULE_DISTRO: amazonlinux:2
-    - MOLECULE_DISTRO: debian:8
-    - MOLECULE_DISTRO: debian:9
-    - MOLECULE_DISTRO: ubuntu:16.04
-    - MOLECULE_DISTRO: ubuntu:18.04
+    - TEST_DISTRO: centos:7
+    - TEST_DISTRO: centos:6
+    - TEST_DISTRO: amazonlinux:1
+    - TEST_DISTRO: amazonlinux:2
+    - TEST_DISTRO: debian:8
+    - TEST_DISTRO: debian:9
+    - TEST_DISTRO: ubuntu:16.04
+    - TEST_DISTRO: ubuntu:18.04
 
 install:
   - pip install molecule docker
+  - pip install --upgrade testinfra
 
 script:
   - molecule test
