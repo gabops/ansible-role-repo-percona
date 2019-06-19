@@ -1,20 +1,4 @@
 ---
 - include_tasks: variables.yml
 
-- block:
-  - name: Install Percona yum repository
-    yum:
-      name: "{{ percona_repo_url }}"
-      state: present
-
-  - name: Import the Percona RPM GPG key
-    rpm_key:
-      key: "{{ percona_repo_gpg_key_url }}"
-      state: present
-  when: ansible_os_family == "RedHat"
-
-- name: Install Percona apt repository
-  apt:
-    deb: "{{ percona_repo_url }}"
-    force_apt_get: yes
-  when: ansible_os_family == "Debian"
+- include_tasks: setup.yml
