@@ -1,6 +1,8 @@
 gabops.repo-percona
 =========
 
+[![Build Status](https://travis-ci.org/gabops/ansible-role-repo-percona.svg?branch=master)](https://travis-ci.org/gabops/ansible-role-repo-percona)
+
 Installs Percona (https://www.percona.com) repository.
 
 Requirements
