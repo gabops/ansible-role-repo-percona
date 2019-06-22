@@ -1,2 +1,2 @@
 ---
-__percona_repo_url: "https://repo.percona.com/apt/percona-release_latest.{{ ansible_distribution_release }}_all.deb"
+__percona_repo_url: "https://repo.percona.com/apt/percona-release_{{ percona_repository_version }}.{{ ansible_distribution_release }}_all.deb"
