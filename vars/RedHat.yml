@@ -1,3 +1,3 @@
 ---
-__percona_repo_url: https://repo.percona.com/yum/percona-release-latest.noarch.rpm
+__percona_repo_url: "https://repo.percona.com/yum/percona-release-{{ percona_repository_version }}.noarch.rpm"
 __percona_repo_gpg_key_url: https://www.percona.com/downloads/RPM-GPG-KEY-percona
