@@ -17,7 +17,8 @@ Role Variables
 The version of the package for installing the repo.
 
 
-Also this role uses internally the next variables with the next default values:
+---
+Usually you will not need to modify the next variables but just in case I added the possibility of overwriting them for covering some hypothetical and unusual scenarios: (see files in vars/)
 
   RedHat os family:
   - `percona_repo_url`: https://repo.percona.com/yum/percona-release- {{ percona_repository_version }}.noarch.rpm
@@ -27,7 +28,6 @@ Also this role uses internally the next variables with the next default values:
   Debian os family:
   - `percona_repo_url`: "https://repo.percona.com/apt/percona-release_{{ percona_repository_version }}.{{ ansible_distribution_release }}_all.deb"
 
-The values can be overwritten as usual when calling the role. (see examples)
 
 Dependencies
 ------------
