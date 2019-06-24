@@ -1,5 +1,5 @@
-gabops.repo-percona
-=========
+gabops.repo_percona
+===================
 
 [![Build Status](https://travis-ci.org/gabops/ansible-role-repo-percona.svg?branch=master)](https://travis-ci.org/gabops/ansible-role-repo-percona)
 
