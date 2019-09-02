@@ -1,6 +1,6 @@
 ---
 - block:
-  - name: Install Percona yum repository
+  - name: Install Percona repository (RedHat)
     yum:
       name: "{{ percona_repo_url }}"
       state: present
@@ -11,7 +11,7 @@
       state: present
   when: ansible_os_family == "RedHat"
 
-- name: Install Percona apt repository
+- name: Install Percona repository (Debian)
   apt:
     deb: "{{ percona_repo_url }}"
     force_apt_get: true
