@@ -2,7 +2,7 @@
 galaxy_info:
   role_name: repo-percona
   author: Gabriel Suarez
-  description: Installs and configures percona repository
+  description: Installs and configures Percona repository
   license: MIT
   min_ansible_version: 2.0
   platforms:
