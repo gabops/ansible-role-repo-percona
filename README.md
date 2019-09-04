@@ -17,6 +17,8 @@ Role Variables
 | --- | --- | --- |
 | percona_repository_version | latest | The version of the package for installing the repo. |
 
+> This role also provides the possibility of overwriting any variable in the **vars/** directory. You **never should do it**. This feature only exists for covering any unexpected scenario you might find. For doing it, just declare the variable/variables without the double underscore on your group_vars, host_vars, command line etc as you would do for a variable in defaults/.
+
 Dependencies
 ------------
 
