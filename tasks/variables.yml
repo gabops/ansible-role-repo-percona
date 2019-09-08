@@ -1,11 +1,6 @@
 ---
-- name: Include os specific variables (RHEL)
+- name: Include os family specific variables
   include_vars: "{{ ansible_os_family }}.yml"
-  when: ansible_os_family == "RedHat"
-
-- name: Include os specific variables (Debian)
-  include_vars: "{{ ansible_os_family }}.yml"
-  when: ansible_os_family == "Debian"
 
 - name: Set Percona repo url
   set_fact:
