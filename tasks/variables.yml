@@ -1,13 +1,3 @@
 ---
 - name: Include os family specific variables
   include_vars: "{{ ansible_os_family }}.yml"
-
-- name: Set Percona repo url
-  set_fact:
-    percona_repo_url: "{{ __percona_repo_url }}"
-  when: percona_repo_url is not defined
-
-- name: Set Percona repo gpg key url
-  set_fact:
-    percona_repo_gpg_key_url: "{{ __percona_repo_gpg_key_url }}"
-  when: percona_repo_gpg_key_url is not defined and ansible_os_family == "RedHat"
